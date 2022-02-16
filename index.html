@@ -38,7 +38,7 @@
                                     <p class="fs-4 ">Income :</p>
                                 </div>
                                 <div class=" col-12 col-md-6 text-center text-md-start">
-                                    <input class="align-middle" type="text">
+                                    <input id="balance-total" class="align-middle" type="text">
                                 </div>
                             </div>
                         </div>
@@ -51,8 +51,8 @@
                                 <div class="col-12 col-md-6 text-center text-md-end">
                                     <p class="fs-4">Food :</p>
                                 </div>
-                                <div class=" col-12 col-md-6 text-center text-md-start">
-                                    <input type="text">
+                                <div class="col-12 col-md-6 text-center text-md-start">
+                                    <input id="food-input" type="text">
                                 </div>
                             </div>
                             <div class="row ">
@@ -60,7 +60,7 @@
                                     <p class="fs-4">Rent :</p>
                                 </div>
                                 <div class=" col-12 col-md-6 text-center text-md-start">
-                                    <input type="text">
+                                    <input id="rent-input" type="text">
                                 </div>
                             </div>
                             <div class="row">
@@ -68,20 +68,22 @@
                                     <p class="fs-4">Cloths :</p>
                                 </div>
                                 <div class=" col-12 col-md-6 text-center text-md-start">
-                                    <input type="text">
+                                    <input id="cloth-input" type="text">
                                 </div>
                             </div>
                             <!--btn  -->
-                            <div class="text-center mb-4 p-3">
+                            <div id="Calculate-button" class="text-center mb-4 p-3">
                                 <button type="button" class="btn btn-success btn-lg">Calculate</button>
                             </div>
                         </div>
                         <!-- Balance total -->
                         <div class="p-2">
-                            <h3 class="text-center fw-semibold">Total Expenses : 5500 </h3>
+                            <h3 class="text-center fw-semibold">Total Expenses : <span id="total-expense"> 000</span>
+                            </h3>
                         </div>
                         <div class="p-3">
-                            <h3 class="text-center fw-semibold mb-4"> Balence Total : 800 </h3>
+                            <h3 class="text-center fw-semibold mb-4"> Balence Total : <span
+                                    id="balence-total">000</span> </h3>
                         </div>
                         <!-- Savings -->
                         <div class="container p-2">
