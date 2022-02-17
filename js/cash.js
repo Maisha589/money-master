@@ -23,7 +23,6 @@ document.getElementById("Calculate-button").addEventListener("click", function (
     const currentExpenseTotal = foodExpense + rentExpense + clothExpense;
     if (foodExpense < 0 || rentExpense < 0 || clothExpense < 0) {
         expenseTotal.innerText = "Please enter a positive number";
-        // balanceTotal.innerText = "";
     }
     else {
         expenseTotal.innerText = currentExpenseTotal;
@@ -60,9 +59,9 @@ document.getElementById("saving-button").addEventListener("click", function () {
 
     // update saving amount
     const savingTotal = document.getElementById("saving-amount");
-    const newBalanceTotal = document.getElementById("balance-total").innerText;
+    const balanceInput = document.getElementById("balance-input").value;
     const savingPercentage = (savingAmount / 100);
-    const saving = savingPercentage * newBalanceTotal;
+    const saving = savingPercentage * balanceInput;
     savingTotal.innerText = saving;
 
 
@@ -72,7 +71,7 @@ document.getElementById("saving-button").addEventListener("click", function () {
     const newBalance = document.getElementById("balance-total").innerText;
     const currentRemainingBalance = newBalance - newSaving;
     if (currentRemainingBalance < 0) {
-        remaininBalance.innerText = "Can't biggere than balance";
+        remaininBalance.innerText = "Balance should be greater than savings";
     }
     else {
         remaininBalance.innerText = currentRemainingBalance;
