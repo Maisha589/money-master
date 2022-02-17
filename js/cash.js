@@ -19,10 +19,15 @@ document.getElementById("Calculate-button").addEventListener("click", function (
 
     // update total expense
     const expenseTotal = document.getElementById("total-expense");
-    // const previousExpenseTotalText = expenseTotal.innerText;
-    // const previousExpenseTotal = parseFloat(previousExpenseTotalText);
+
     const currentExpenseTotal = foodExpense + rentExpense + clothExpense;
-    expenseTotal.innerText = currentExpenseTotal;
+    if (foodExpense < 0 || rentExpense < 0 || clothExpense < 0) {
+        expenseTotal.innerText = "Please enter a positive number";
+        balanceTotal.innerText = "";
+    }
+    else {
+        expenseTotal.innerText = currentExpenseTotal;
+    }
 
 
     // get Income Value
@@ -34,19 +39,24 @@ document.getElementById("Calculate-button").addEventListener("click", function (
     // Update balance Total
     const balanceTotal = document.getElementById("balance-total");
     const currentBalanceTotal = balance - currentExpenseTotal;
-    balanceTotal.innerText = currentBalanceTotal;
+    if (currentExpenseTotal > balance) {
+        balanceTotal.innerText = "Total expense cannot be bigger than balance";
+    }
+    else {
+        balanceTotal.innerText = currentBalanceTotal;
+    }
 
-})
+});
 
 
 
 //Save button 
 document.getElementById("saving-button").addEventListener("click", function () {
-    // console.log("cliced");
+
     const savingInput = document.getElementById("saving-value");
     const savingInputText = savingInput.value;
     const savingAmount = parseFloat(savingInputText);
-    // console.log(savingAmount);
+
 
     // update saving amount
     const savingTotal = document.getElementById("saving-amount");
@@ -54,14 +64,19 @@ document.getElementById("saving-button").addEventListener("click", function () {
     const savingPercentage = (savingAmount / 100);
     const saving = savingPercentage * newBalanceTotal;
     savingTotal.innerText = saving;
-    // console.log(saving);
+
 
     // update remaining Balance
     const remaininBalance = document.getElementById("remaining-amount");
     const newSaving = document.getElementById("saving-amount").innerText;
     const newBalance = document.getElementById("balance-total").innerText;
     const currentRemainingBalance = newBalance - newSaving;
-    remaininBalance.innerText = currentRemainingBalance;
+    if (newSaving > newBalance) {
+        remaininBalance.innerText = "saving can't bigger than newBalance"
+    }
+    else {
+        remaininBalance.innerText = currentRemainingBalance;
 
+    }
 
 });
