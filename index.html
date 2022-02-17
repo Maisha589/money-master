@@ -38,7 +38,7 @@
                                     <p class="fs-4 ">Income :</p>
                                 </div>
                                 <div class=" col-12 col-md-6 text-center text-md-start">
-                                    <input id="balance-total" class="align-middle" type="text">
+                                    <input id="balance-input" class="align-middle" type="text">
                                 </div>
                             </div>
                         </div>
@@ -82,8 +82,8 @@
                             </h3>
                         </div>
                         <div class="p-3">
-                            <h3 class="text-center fw-semibold mb-4"> Balence Total : <span
-                                    id="balence-total">000</span> </h3>
+                            <h3 class="text-center fw-semibold mb-4"> Balance Total : <span
+                                    id="balance-total">000</span> </h3>
                         </div>
                         <!-- Savings -->
                         <div class="container p-2">
@@ -95,7 +95,7 @@
                                             <p class="fs-4">Save</p>
                                         </div>
                                         <div class="col-md-4 text-center align-middle ">
-                                            <input type="text">
+                                            <input id="saving-value" type="text">
                                         </div>
                                         <div class="col-md-4 text-center text-md-end align-middle">
                                             <p class="fs-4">%</p>
@@ -104,16 +104,19 @@
 
                                 </div>
                                 <div class="text-center col-12 col-md-4">
-                                    <button type="button" class="btn btn-success btn-lg">Save</button>
+                                    <button id="saving-button" type="button"
+                                        class="btn btn-success btn-lg">Save</button>
                                 </div>
                             </div>
                         </div>
                         <!-- total -->
                         <div class="p-2">
-                            <h3 class="text-center fw-semibold"> Saving Amount : 000 </h3>
+                            <h3 class="text-center fw-semibold"> Saving Amount : <span id="saving-amount">000</span>
+                            </h3>
                         </div>
                         <div class="p-3">
-                            <h3 class="text-center fw-semibold mb-2"> Remaining Balence : 000 </h3>
+                            <h3 class="text-center fw-semibold mb-2"> Remaining Balance : <span
+                                    id="remaining-amount">000</span> </h3>
                         </div>
                     </div>
 
