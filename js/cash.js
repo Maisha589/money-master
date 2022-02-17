@@ -71,6 +71,11 @@ document.getElementById("saving-button").addEventListener("click", function () {
     const newSaving = document.getElementById("saving-amount").innerText;
     const newBalance = document.getElementById("balance-total").innerText;
     const currentRemainingBalance = newBalance - newSaving;
-    remaininBalance.innerText = currentRemainingBalance;
+    if (currentRemainingBalance < 0) {
+        remaininBalance.innerText = "Can't biggere than balance";
+    }
+    else {
+        remaininBalance.innerText = currentRemainingBalance;
+    }
 
 });
